@@ -14,4 +14,8 @@ my $doc = XML::LibXML->load_xml(
 my $root = $doc->documentElement();
 
 my ($id,) = $doc->getElementsByTagName('id');
-print $id->textContent, "\n";
+$id = $id->textContent;
+print 'tweets: ', 'http://twitter.com/statuses/user_timeline/',
+    $id, ".rss\n";
+print 'favorites: ', 'http://twitter.com/favorites/',
+    $id, ".rss\n";
