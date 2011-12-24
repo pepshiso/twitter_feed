@@ -1,1 +1,3 @@
 input username and get feed
+
+usage: perl twitter_feed.pl [username]
