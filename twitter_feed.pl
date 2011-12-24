@@ -5,7 +5,7 @@ use autodie;
 use XML::LibXML;
 
 if (@ARGV != 1) {
-    die "usage: $0 [username]\n";
+    die "usage: perl twitter_feed.pl [username]\n";
 }
 
 my $doc = XML::LibXML->load_xml(
