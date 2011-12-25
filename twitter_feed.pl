@@ -5,9 +5,7 @@ use autodie;
 use XML::Simple;
 use HTTP::Lite;
 
-if (@ARGV != 1) {
-    die "usage: perl twitter_feed.pl [username]\n";
-}
+die "usage: perl twitter_feed.pl [username]\n" unless @ARGV == 1;
 my $username = $ARGV[0];
 
 my $http = HTTP::Lite->new;
